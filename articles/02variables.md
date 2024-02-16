@@ -85,29 +85,33 @@
 ### => var, let နဲ့ const တို့ရဲ့ ကွာခြားချက်များ 
 
  
-    ` var a = 100;  // output - 100 
-     
+     var a = 100;  // output - 100 
+    
      let b = 100;  // output - 100
      
-     const c = 100;  // output - 100`
+     const c = 100;  // output - 100
      
      
   ဒီအပေါ်က အတိုင်းဆိုရင်တော့ output တွေက ဘာမှ ကွာခြားမှု မရှိသေးပါဘူး။ ဒီတစ်ခေါက်မှာတော့ အပေါ်က declare လုပ်ပြီးသား variable name တွေကို value အသစ်ထပ်ထည့် ပြပါမယ်။  ဒါကို overwrite တယ်လို့ခေါ်ပါတယ်။ ကုတ်တွေက အပေါ်ကနေ အောက်ကို ဆင်းတဲ့ အတိုင်း အလုပ်လုပ်တဲ့အတွက် အောက်ဆုံးက overwrite ထားတဲ့ value ကိုပဲ output ထွက်ပါတယ်။ 
+
+    var x = 100; 
+        x = 200; // 200 
+        
+   var နဲ့ declare လုပ်ထားတဲ့ကောင်ကို value အသစ်ပြန်ခေါ်တာ ရပါတယ်။  ဆိုလိုတာက overwrite လို့ရတယ်ပေါ့။ 
      
-    ` var a = 200;  // output - 200 `
-     
-    var နဲ့ declare လုပ်ထားတဲ့ကောင်ကို value အသစ်ပြန်ခေါ်တာ ရပါတယ်။  ဆိုလိုတာက overwrite လို့ရတယ်ပေါ့။ 
-     
-     `let b = 200; // output - 200` 
+     b = 200; // output - 200` 
      
     let နဲ့ declare လုပ်ထားတာကိုလည်း  overwrite လို့ရတယ်။  
      
-    ` const c = 200; // output - Uncaught SyntaxError: Identifier 'c' has already been declared`
+     c = 200; // output - Uncaught SyntaxError: Identifier 'c' has already been declared`
      
      
     const မှာဆိုရင်တော့ error တက်တာ တွေ့ရပါလိမ့်မယ်။ အပေါ်မှာ const နဲ့ declare လုပ်ထားတဲ့ variable ကို overwrite လုပ်လို့မရပါဘူး။ ဘာလို့ဆို သူက ပုံသေသတ်မှတ်ထားပြီးသား constant variable ဖြစ်နေလို့ပါ။ 
      
-  အခုချိန်မှာတော့ var နဲ့ let နဲ့က အတူတူပဲလို့ မှတ်ထားလို့ရပါတယ်။  const တစ်ခုပဲ overwrite မရတာပါ။  နောက်ပိုင်းမှာတော့ var နဲ့ let ကွာခြားမှုအကြောင်း သိပါလိမ့်မယ်။
+  အခုချိန်မှာတော့ var နဲ့ let နဲ့က အတူတူပဲလို့ မှတ်ထားလို့ရပါတယ်။  const တစ်ခုပဲ overwrite မရတာပါ။  နောက်ပိုင်းမှာတော့ var နဲ့ let ကွာခြားမှုအကြောင်း သိပါလိမ့်မယ်။ သို့သော် declare လုပ်ပြီးသား variable name တွေကိုတော့ ထပ်ကြေငြာလို့မရပါဘူး။
+
+     var x = 100;
+     var x = 200; // error
     
      
     
